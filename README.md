@@ -17,3 +17,5 @@ Name database: d3j7dsnt5tue8p
 User: emqdkvrwjmwgef
 
 password: fce6a3a050071d3092869bf99621403d039532367bf17309bbb545d36d8cb4c1
+
+Se utilizo la tecnologia de JPA y Spring Data JPA avanzado para las consultas.
