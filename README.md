@@ -4,7 +4,7 @@
 
 Preferible correr el proyecto en intellij idea ultimate.
 
-Puede correr el eclipse, descargue la extension de spring en eclipse.
+Puede correr en eclipse, descargue la extension de spring en eclipse.
 
 En caso de que tenga problema con la libreria lombok en eclipse, descargar el archivo jar y pegarlo en la carpeta de proyectos de eclipse, https://projectlombok.org/download
 
