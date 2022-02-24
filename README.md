@@ -11,6 +11,9 @@ En caso de que tenga problema con la libreria lombok en eclipse, descargar el ar
 Credenciales de base de datos posgret:
 
 ServerName: ec2-52-73-149-159.compute-1.amazonaws.com
+
 Name database: d3j7dsnt5tue8p
+
 User: emqdkvrwjmwgef
+
 password: fce6a3a050071d3092869bf99621403d039532367bf17309bbb545d36d8cb4c1
