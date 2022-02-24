@@ -20,18 +20,34 @@ public class RestaurantController {
     @Autowired
     RestaurantService restaurantService;
 
+    /**
+     * METODO PARA TRAER LOS RESTAURANTES, PARA UNA MAYOR ESCALA A FUTURO DE LA APLICACION
+     * @return
+     * @throws BookingException
+     */
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "restaurants", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public BookingResponse<List<RestaurantRest>> getRestaurants() throws BookingException {
         return new BookingResponse<>("Succes", String.valueOf(HttpStatus.OK), "OK", restaurantService.getRestaurants());
     }
 
+    /**
+     * METODO PARA TRAER RESTAURANT CON SUS PLATILLOS INCLUIDOS
+     * @return
+     * @throws BookingException
+     */
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "restaurants_food_dishes", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public BookingResponse<List<RestaurantFoodDishesRest>> getRestaurantsFoodDishes() throws BookingException {
         return new BookingResponse<>("Succes", String.valueOf(HttpStatus.OK), "OK", restaurantService.getRestaurantsFoodDishes());
     }
 
+    /**
+     * METODO PARA TRAER UN RESTAURANT MEDIANTE SU ID
+     * @param restaurantId
+     * @return
+     * @throws BookingException
+     */
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "restaurant" + "/{" + "restaurantId"
             + "}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)

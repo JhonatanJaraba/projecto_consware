@@ -22,6 +22,11 @@ public class RestaurantServiceImpl implements RestaurantService {
 
     public static final ModelMapper modelMapper = new ModelMapper();
 
+    /**
+     * LOGICA DE NEGOCIO PARA LISTAR RESTAURANTES
+     * @return
+     * @throws BookingException
+     */
     @Override
     public List<RestaurantRest> getRestaurants() throws BookingException {
         final List<Restaurant> restaurantsEntity = restaurantRepository.findAll();
@@ -29,6 +34,11 @@ public class RestaurantServiceImpl implements RestaurantService {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * LOGICA DE NEGOCIO PARA LISTAR RESTAURANT CON SUS PLATILLOS
+     * @return
+     * @throws BookingException
+     */
     @Override
     public List<RestaurantFoodDishesRest> getRestaurantsFoodDishes() throws BookingException {
         final List<Restaurant> restaurantsEntity = restaurantRepository.findAll();
@@ -36,6 +46,12 @@ public class RestaurantServiceImpl implements RestaurantService {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * LGICA DE NEGOCIO PARA LLAMAR UN RESTAURANT POR ID
+     * @param restaurantId
+     * @return
+     * @throws BookingException
+     */
     @Override
     public RestaurantFoodDishesRest getRestaurantById(Long restaurantId) throws BookingException {
         return modelMapper.map(getRestaurantByIds(restaurantId), RestaurantFoodDishesRest.class);

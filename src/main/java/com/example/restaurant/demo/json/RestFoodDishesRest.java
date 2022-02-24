@@ -1,10 +1,13 @@
 package com.example.restaurant.demo.json;
 
+import com.example.restaurant.demo.entity.Ingredients;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.Column;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class RestFoodDishesRest {
@@ -20,6 +23,9 @@ public class RestFoodDishesRest {
 
     @JsonProperty("creation_date")
     private Date creation_date;
+
+    @JsonProperty("ingredients")
+    private Set<RestIngredientesFull> ingredients = new HashSet<>();
 
     public Long getId() {
         return Id;
@@ -51,5 +57,13 @@ public class RestFoodDishesRest {
 
     public void setCreation_date(Date creation_date) {
         this.creation_date = creation_date;
+    }
+
+    public Set<RestIngredientesFull> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(Set<RestIngredientesFull> ingredients) {
+        this.ingredients = ingredients;
     }
 }

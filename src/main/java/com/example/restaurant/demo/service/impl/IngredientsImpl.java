@@ -31,6 +31,12 @@ public class IngredientsImpl implements IngredientsService {
 
     public static final ModelMapper modelMapper = new ModelMapper();
 
+    /**
+     * LOGICA DE NEGOCIO PARA CREAR INGREDIENTES
+     * @param ingredientsRest
+     * @return
+     * @throws BookingException
+     */
     @Override
     public String createingrediente(IngredientsRest ingredientsRest) throws BookingException {
 
@@ -50,6 +56,11 @@ public class IngredientsImpl implements IngredientsService {
         return "Ingrediente creado";
     }
 
+    /**
+     * LOGICA DE NEGOCIO PARA LISTAR INGREDIENTES
+     * @return
+     * @throws BookingException
+     */
     @Override
     public List<ListaIngredienteRest> getIngredientes() throws BookingException {
         final List<Ingredients> restaurantsEntity = ingredientsRepository.findAll();
@@ -57,6 +68,11 @@ public class IngredientsImpl implements IngredientsService {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * LOGICA DE NEGOCIO PARA LISTAR PLATOS
+     * @return
+     * @throws BookingException
+     */
     @Override
     public List<ListaPlatosRest> getListaPlatos() throws BookingException {
         final List<ListaDePlatos> ListaPlatos = listaDePlatosRepository.ListaPlatos();

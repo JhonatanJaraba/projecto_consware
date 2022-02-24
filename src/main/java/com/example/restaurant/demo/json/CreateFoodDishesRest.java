@@ -23,7 +23,7 @@ public class CreateFoodDishesRest {
     private Long restaurants;
 
     @JsonProperty("ingredients")
-    private List<IngredientsRest> ingredients;
+    private List<String> ingredients;
 
     public String getName() {
         return name;
@@ -57,11 +57,11 @@ public class CreateFoodDishesRest {
         this.restaurants = restaurants;
     }
 
-    public List<IngredientsRest> getIngredients() {
+    public List<String> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(List<IngredientsRest> ingredients) {
+    public void setIngredients(List<String> ingredients) {
         this.ingredients = ingredients;
     }
 }

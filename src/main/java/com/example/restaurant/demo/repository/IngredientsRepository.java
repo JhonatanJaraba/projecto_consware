@@ -12,4 +12,6 @@ public interface IngredientsRepository extends JpaRepository<Ingredients, Long> 
 
     Optional<Ingredients> findById(Long id);
 
+    Optional<Ingredients> findByName(String ingredients);
+
 }
