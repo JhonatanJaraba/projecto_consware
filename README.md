@@ -10,12 +10,12 @@ En caso de que tenga problema con la libreria lombok en eclipse, descargar el ar
 
 Credenciales de base de datos posgret:
 
-ServerName: ec2-52-73-149-159.compute-1.amazonaws.com
+ServerName: ec2-3-209-61-239.compute-1.amazonaws.com
 
-Name database: d3j7dsnt5tue8p
+Name database: d6dbma5g031sck
 
-User: emqdkvrwjmwgef
+User: nhdrbllxgsaxkf
 
-password: fce6a3a050071d3092869bf99621403d039532367bf17309bbb545d36d8cb4c1
+password: 0213661bb99be6e3aaa03055eed9bfcd6e511d1bdf8064605331d16a012a0233
 
 Se utilizo la tecnologia de JPA y Spring Data JPA avanzado para las consultas.
